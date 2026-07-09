@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Evan Wijaya - Portofolio</title>
+    <style>
+        /* --- RESET & BASE STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        
+        /* Gambar Responsif */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        /* --- SECTION 1: NAVBAR --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 15px;
+        }
+
+        /* --- SECTION 2: HERO HEADER --- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile default */
+            gap: 20px;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        /* --- SECTION 3: BIODATA (ABOUT ME) --- */
+        .about-section {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .about-header {
+            margin-bottom: 20px;
+        }
+        .biodata-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile default: 1 kolom stack kebawah */
+            gap: 15px;
+        }
+        .bio-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- SECTION 4: PORTOFOLIO --- */
+        .portfolio-section {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .portfolio-section h2 {
+            margin-bottom: 20px;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile default */
+            gap: 20px;
+        }
+        .portfolio-card {
+            border: 1px solid #ddd;
+            background: #fff;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .portfolio-info {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        /* ==========================================================================
+           MEDIA QUERIES (RESPONSIVE DESIGN)
+           ========================================================================== */
+
+        /* --- TABLET LAYOUT (Lebar layar mulai dari 600px ke atas) --- */
+        @media (min-width: 600px) {
+            .biodata-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 Kolom di Tablet */
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 Kolom di Tablet */
+            }
+        }
+
+        /* --- DESKTOP LAYOUT (Lebar layar mulai dari 992px ke atas) --- */
+        @media (min-width: 992px) {
+            body {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .hero {
+                grid-template-columns: 1fr 1fr; /* 2 Kolom berdampingan (Teks & Gambar) */
+            }
+            .biodata-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 Kolom di Desktop */
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 Kolom di Desktop */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand"><strong>Brand</strong></div>
+        <div class="menu">
+            <a href="#section2">Header</a>
+            <a href="#section3">Biodata</a>
+            <a href="#section4">Portofolio</a>
+        </div>
+    </nav>
+
+    <header id="section2" class="hero">
+        <div class="hero-text">
+            <h2>Charles Evan Wijaya</h2>
+            <br>
+            <p>Ini adalah contoh header dengan layout responsive menggunakan CSS Grid. Kolom akan otomatis menyesuaikan diri tergantung ukuran layar gawai Anda.</p>
+            <br>
+            <p><a href="#">Pelajari Lebih Lanjut...</a></p>
+        </div>
+        <div class="hero-image">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.ixUS-pGQV0eYrKZwPMkbdAEsCr?r=0&pid=Api&P=0&h=180" alt="Charles Evan Wijaya">
+        </div>
+    </header>
+
+    <section id="section3" class="about-section">
+        <div class="about-header">
+            <h2>About Me</h2>
+            <p><em>Personal introduction details separated</em></p>
+        </div>
+        
+        <div class="biodata-grid">
+            <div class="bio-box">Full Name</div>
+            <div class="bio-box">Education</div>
+            <div class="bio-box">Work / Pekerjaan</div>
+            <div class="bio-box">Contact</div>
+            <div class="bio-box">Hobi</div>
+            <div class="bio-box">Alamat</div>
+        </div>
+    </section>
+
+    <section id="section4" class="portfolio-section">
+        <h2>Portofolio</h2>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.X8bqlgz0xePxRj9sGHuzHAHaEK?r=0&pid=Api&P=0&h=180" alt="Proyek 1">
+                <div class="portfolio-info">
+                    <strong>Proyek 1</strong><br>
+                    <small>Deskripsi proyek 1</small>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.vu1x4l7oY_9bO-UTvOVxRgHaEO?r=0&pid=Api&P=0&h=180" alt="Proyek 2">
+                <div class="portfolio-info">
+                    <strong>Proyek 2</strong><br>
+                    <small>Deskripsi proyek 2</small>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.uRM6HtMTCKZSn56EjKG6xAHaEJ?r=0&pid=Api&P=0&h=180" alt="Proyek 3">
+                <div class="portfolio-info">
+                    <strong>Proyek 3</strong><br>
+                    <small>Deskripsi proyek 3</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
